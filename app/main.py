@@ -9,7 +9,7 @@ from aiohttp import web
 from .telegram import Client
 from .routes import setup_routes
 from .views import Views
-from .config import host, port, session_string, api_id, api_hash, debug
+from .config import host, port, session_string, api_id, api_hash, debug,bot_token
 
 
 log = logging.getLogger(__name__)
@@ -22,7 +22,7 @@ class Indexer:
     def __init__(self):
         self.server = web.Application()
         self.loop = asyncio.get_event_loop()
-        self.tg_client = Client(session_string, api_id, api_hash)
+        self.tg_client = Client('bot',bot_token, api_id, api_hash)
 
 
     async def startup(self):
