@@ -54,12 +54,12 @@ except (KeyError, ValueError):
     print("\n\nPlease set the SESSION_STRING environment variable correctly")
     sys.exit(1)
 
-# try:
-#     bot_token = os.environ["BOT_TOKEN"]
-# except (KeyError, ValueError):
-#     traceback.print_exc()
-#     print("\n\nPlease set the BOT_TOKEN environment variable correctly")
-#     sys.exit(1)
+ try:
+     bot_token = os.environ["BOT_TOKEN"]
+ except (KeyError, ValueError):
+     traceback.print_exc()
+     print("\n\nPlease set the BOT_TOKEN environment variable correctly")
+     sys.exit(1)
 
 
 
